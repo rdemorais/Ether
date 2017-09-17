@@ -1,6 +1,6 @@
 FROM ubuntu
 RUN apt-get update && \
-    apt-get install software-properties-common && \
+    apt-get install software-properties-common -y --no-install-recommends && \
     add-apt-repository -y ppa:ethereum/ethereum && \
     apt-get update && \
-    apt-get install ethereum -y
+    apt-get install ethereum -y --no-install-recommends
