@@ -4,5 +4,5 @@ RUN apt-get update && \
     add-apt-repository -y ppa:ethereum/ethereum && \
     apt-get update && \
     apt-get install ethereum -y --no-install-recommends && \
-    apt-get purge -y --auto-remove wget && \
-    apt-get clean
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
